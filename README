@@ -1,9 +1,12 @@
 
-Initial placeholder for creating foreign keys to existing schema.
+Primary goal: documentation of the ez publish database schema
+For this time, foreign keys will only be applied to the DB so that schemaSpy can generate 
+the diagrams for the eZ Publish core database design and selected extensions.
+
+Secondary goal: placeholder for creating foreign keys to existing schema.
 The idea is to introduce foreign keys as a separate project
-The foreign keys can be applied to the eZ Publish schema at a later point.
-For this time, it will only be applied to the DB so that schemaSpy can generate 
-the diagrams for the eZ Publish core database design. Extensions may be added later.
+The foreign keys can be introduced to the bundled eZ Publish schema at a later point.
+Potential purposes can be cascading deletes and concistency checks.
 
 
 schemaSpy requires 
@@ -12,10 +15,15 @@ schemaSpy requires
 * graphviz
 
 
-To generate the diagrams
+To generate the schemaSpy diagrams
 
-* symlink the git clone from the ezpublish extension folder (no need to activate as an extension)
-* 'php extension/db/php/autogenkeys.php' generates the sql (no html formating) found in fkeys_generated.sql
-* fkeys_manual.sql contains SQL foreign keys not handled by autogenkeys.php
 * Verify for db name username & password in generate_diagrams.sh
 * Run generate_diagrams.sh
+
+
+To re-generate the sql foreign keys (already in the sql folder)
+
+* symlink the git clone from the ezpublish extension folder (no need to activate as an extension)
+* 'php extension/schemadoc/php/autogenkeys.php' generates the sql (to standard out, no html formating) found in fkeys_generated.sql
+* fkeys_manual.sql contains SQL foreign keys not handled by autogenkeys.php
+
