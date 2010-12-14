@@ -1,0 +1,507 @@
+../ezpublish/kernel/classes/datatypes/ezbinaryfile/ezbinaryfile.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezbinaryfile/ezbinaryfile.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezbinaryfile/ezbinaryfile.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumobjectvalue.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumobjectvalue.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumobjectvalue.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumvalue.php:                                                                               'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumvalue.php-                                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezenum/ezenumvalue.php-                                                                               'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezimage/ezimagefile.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezimage/ezimagefile.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezimage/ezimagefile.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezmedia/ezmedia.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezmedia/ezmedia.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezmedia/ezmedia.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php:                                                            'foreign_class' => 'eZURL',
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php-                                                            'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php-                                                            'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezurl/ezurlobjectlink.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezuser/ezforgotpassword.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/datatypes/ezuser/ezforgotpassword.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/datatypes/ezuser/ezforgotpassword.php-                                                             'multiplicity' => '0..*' ),
+--
+../ezpublish/kernel/classes/datatypes/ezuser/ezuser.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/datatypes/ezuser/ezuser.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/datatypes/ezuser/ezuser.php-                                                                      'multiplicity' => '0..1' ),
+--
+../ezpublish/kernel/classes/datatypes/ezuser/ezusersetting.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/datatypes/ezuser/ezusersetting.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/datatypes/ezuser/ezusersetting.php-                                                             'multiplicity' => '0..1' ),
+--
+../ezpublish/kernel/classes/ezbasket.php:                                                                          'foreign_class' => 'eZProductCollection',
+../ezpublish/kernel/classes/ezbasket.php-                                                                          'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezbasket.php-                                                                          'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezbasket.php:                                                              'foreign_class' => 'eZOrder',
+../ezpublish/kernel/classes/ezbasket.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezbasket.php-                                                              'multiplicity' => '1..*') ),
+--
+../ezpublish/kernel/classes/ezcollaborationgroup.php:                                                                     'foreign_class' => 'eZCollaborationGroup',
+../ezpublish/kernel/classes/ezcollaborationgroup.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationgroup.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationgroup.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationgroup.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationgroup.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php:                                                                      'foreign_class' => 'eZCollaborationItem',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php:                                                              'foreign_class' => 'eZCollaborationGroup',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationitemgrouplink.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php:                                                                      'foreign_class' => 'eZCollaborationItem',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php:                                                                'foreign_class' => 'eZCollaborationSimpleMessage',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php:                                                                    'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                    'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationitemmessagelink.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php:                                                                      'foreign_class' => 'eZCollaborationItem',
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php:                                                                    'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php-                                                                    'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemparticipantlink.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitem.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationitem.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationitem.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php:                                                                      'foreign_class' => 'eZCollaborationItem',
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationitemstatus.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationprofile.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationprofile.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationprofile.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationprofile.php:                                                                'foreign_class' => 'eZCollaborationGroup',
+../ezpublish/kernel/classes/ezcollaborationprofile.php-                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcollaborationprofile.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcollaborationsimplemessage.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcollaborationsimplemessage.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcollaborationsimplemessage.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php:                                                             'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php-                                                             'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezcontentbrowsebookmark.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentbrowserecent.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentbrowserecent.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentbrowserecent.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentbrowserecent.php:                                                             'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezcontentbrowserecent.php-                                                             'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezcontentbrowserecent.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassattribute.php:                                                                     'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezcontentclassattribute.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentclassattribute.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassclassgroup.php:                                                                     'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezcontentclassclassgroup.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentclassclassgroup.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassgroup.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentclassgroup.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentclassgroup.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassgroup.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentclassgroup.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentclassgroup.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassname.php:                                                                     'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezcontentclassname.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentclassname.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclassname.php:                                                                 'foreign_class' => 'eZContentLanguage',
+../ezpublish/kernel/classes/ezcontentclassname.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentclassname.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclass.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclass.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentclass.php:                                                                         'foreign_class' => 'eZContentLanguage',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                         'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentclass.php-                                                                         'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectattribute.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectattribute.php:                                                                 'foreign_class' => 'eZContentLanguage',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectattribute.php:                                                                              'foreign_class' => 'eZContentClassAttribute',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectattribute.php:                                                                           'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                           'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectattribute.php-                                                                           'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobject.php:                                                                'foreign_class' => 'eZSection',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobject.php:                                                              'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                              'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                              'multiplicity' => '1..*'),
+--
+../ezpublish/kernel/classes/ezcontentobject.php:                                                                     'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobject.php:                                                                         'foreign_class' => 'eZContentLanguage',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                         'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobject.php-                                                                         'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/classes/ezcontentobjecttrashnode.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezcontentobjecttrashnode.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjecttrashnode.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php:                                                                    'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                    'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php:                                                                  'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                  'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                  'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjecttreenode.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectversion.php:                                                                       'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                       'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                       'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectversion.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectversion.php:                                                              'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                              'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezcontentobjectversion.php:                                                                         'foreign_class' => 'eZContentLanguage',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                         'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezcontentobjectversion.php-                                                                         'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/classes/ezdiscountsubrule.php:                                                                     'foreign_class' => 'eZDiscountRule',
+../ezpublish/kernel/classes/ezdiscountsubrule.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezdiscountsubrule.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezdiscountsubrulevalue.php:                                                                        'foreign_class' => 'eZDiscountSubRule',
+../ezpublish/kernel/classes/ezdiscountsubrulevalue.php-                                                                        'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezdiscountsubrulevalue.php-                                                                        'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php:                                                                              'foreign_class' => 'eZInformationCollection',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php:                                                                               'foreign_class' => 'eZContentClassAttribute',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                               'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php:                                                                                'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                                'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezinformationcollectionattribute.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollection.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezinformationcollection.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezinformationcollection.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezinformationcollection.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezinformationcollection.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezinformationcollection.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/eznodeassignment.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/eznodeassignment.php:                                                                 'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                 'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/eznodeassignment.php:                                                                  'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                  'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/eznodeassignment.php-                                                                  'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorderitem.php:                                                              'foreign_class' => 'eZOrder',
+../ezpublish/kernel/classes/ezorderitem.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezorderitem.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorder.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezorder.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezorder.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorder.php:                                                                          'foreign_class' => 'eZProductCollection',
+../ezpublish/kernel/classes/ezorder.php-                                                                          'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezorder.php-                                                                          'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorder.php:                                                               'foreign_class' => 'eZOrderStatus',
+../ezpublish/kernel/classes/ezorder.php-                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezorder.php-                                                               'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorder.php:                                                                        'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezorder.php-                                                                        'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezorder.php-                                                                        'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorderstatushistory.php:                                                              'foreign_class' => 'eZOrder',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorderstatushistory.php:                                                               'foreign_class' => 'eZOrderStatus',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                               'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezorderstatushistory.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezorderstatushistory.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpdfexport.php:                                                                    'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                    'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpdfexport.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpdfexport.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezpdfexport.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpolicylimitation.php:                                                               'foreign_class' => 'eZPolicy',
+../ezpublish/kernel/classes/ezpolicylimitation.php-                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezpolicylimitation.php-                                                               'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpolicylimitationvalue.php:                                                                   'foreign_class' => 'eZPolicyLimitation',
+../ezpublish/kernel/classes/ezpolicylimitationvalue.php-                                                                   'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezpolicylimitationvalue.php-                                                                   'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezpolicy.php:                                                             'foreign_class' => 'eZRole',
+../ezpublish/kernel/classes/ezpolicy.php-                                                             'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezpolicy.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php:                                                             'foreign_class' => 'eZProductCollectionItem',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                             'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php:                                                                    'foreign_class' => 'eZProductCollectionItemOption',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                                    'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php:                                                                         'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                                         'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezproductcollectionitemoption.php-                                                                         'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezproductcollectionitem.php:                                                                          'foreign_class' => 'eZProductCollection',
+../ezpublish/kernel/classes/ezproductcollectionitem.php-                                                                          'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezproductcollectionitem.php-                                                                          'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezproductcollectionitem.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezproductcollectionitem.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezproductcollectionitem.php-                                                                      'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssexportitem.php:                                                                  'foreign_class' => 'eZRSSExport',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                                  'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                                  'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssexportitem.php:                                                                    'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                                    'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                                    'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssexportitem.php:                                                              'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezrssexportitem.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssexport.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezrssexport.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezrssexport.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssexport.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezrssexport.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezrssexport.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssimport.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssimport.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssimport.php:                                                                     'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                     'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssimport.php:                                                                         'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                         'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezrssimport.php-                                                                         'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezrssimport.php:                                                              'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/ezrssimport.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezrssimport.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/eztrigger.php:                                                                 'foreign_class' => 'eZWorkflow',
+../ezpublish/kernel/classes/eztrigger.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/eztrigger.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezuserdiscountrule.php:                                                                     'foreign_class' => 'eZDiscountRule',
+../ezpublish/kernel/classes/ezuserdiscountrule.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezuserdiscountrule.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezuserdiscountrule.php:                                                                      'foreign_class' => 'eZContentObject',
+../ezpublish/kernel/classes/ezuserdiscountrule.php-                                                                      'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezuserdiscountrule.php-                                                                      'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/classes/ezviewcounter.php:                                                             'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/ezviewcounter.php-                                                             'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/ezviewcounter.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezwishlist.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezwishlist.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezwishlist.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezwishlist.php:                                                                          'foreign_class' => 'eZProductCollection',
+../ezpublish/kernel/classes/ezwishlist.php-                                                                         'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezwishlist.php-                                                                         'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/classes/ezworkflowevent.php:                                                                 'foreign_class' => 'eZWorkflow',
+../ezpublish/kernel/classes/ezworkflowevent.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezworkflowevent.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowgrouplink.php:                                                                 'foreign_class' => 'eZWorkflow',
+../ezpublish/kernel/classes/ezworkflowgrouplink.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezworkflowgrouplink.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowgrouplink.php:                                                              'foreign_class' => 'eZWorkflowGroup',
+../ezpublish/kernel/classes/ezworkflowgrouplink.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezworkflowgrouplink.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowgroup.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezworkflowgroup.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezworkflowgroup.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowgroup.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezworkflowgroup.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezworkflowgroup.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflow.php:                                                                'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezworkflow.php-                                                                'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezworkflow.php-                                                                'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflow.php:                                                                 'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezworkflow.php-                                                                 'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezworkflow.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowprocess.php:                                                                 'foreign_class' => 'eZWorkflow',
+../ezpublish/kernel/classes/ezworkflowprocess.php-                                                                 'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/ezworkflowprocess.php-                                                                 'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/ezworkflowprocess.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/ezworkflowprocess.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/ezworkflowprocess.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php:                                                                   'foreign_class' => 'eZNotificationCollection',
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php-                                                                   'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php-                                                                   'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php:                                                              'foreign_class' => 'eZNotificationEvent',
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/notification/eznotificationcollectionitem.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/eznotificationcollection.php:                                                              'foreign_class' => 'eZNotificationEvent',
+../ezpublish/kernel/classes/notification/eznotificationcollection.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/notification/eznotificationcollection.php-                                                              'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/handler/ezcollaborationnotification/ezcollaborationnotificationrule.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/notification/handler/ezcollaborationnotification/ezcollaborationnotificationrule.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/notification/handler/ezcollaborationnotification/ezcollaborationnotificationrule.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php:                                                             'foreign_class' => 'eZUser',
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php-                                                             'foreign_attribute' => 'contentobject_id',
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php-                                                             'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php:                                                             'foreign_class' => 'eZContentObjectTreeNode',
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php-                                                             'foreign_attribute' => 'node_id',
+../ezpublish/kernel/classes/notification/handler/ezsubtree/ezsubtreenotificationrule.php-                                                             'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php:                                                                       'foreign_class' => 'eZWorkflowEvent',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                       'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                       'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php:                                                                     'foreign_class' => 'eZContentClass',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                     'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                     'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php:                                                                               'foreign_class' => 'eZContentClassAttribute',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                               'foreign_attribute' => 'id',
+../ezpublish/kernel/classes/workflowtypes/event/ezwaituntildate/ezwaituntildatevalue.php-                                                                               'multiplicity' => '1..*' ) ),
+--
+../ezpublish/kernel/private/classes/ezcontentobjectstategrouplanguage.php:                                                                                                "foreign_class" => "eZContentObjectStateGroup",
+../ezpublish/kernel/private/classes/ezcontentobjectstategrouplanguage.php-                                                                                                "foreign_attribute" => "id",
+../ezpublish/kernel/private/classes/ezcontentobjectstategrouplanguage.php-                                                                                                "multiplicity" => "1..*" ),
+--
+../ezpublish/kernel/private/classes/ezcontentobjectstatelanguage.php:                                                                                          "foreign_class" => "eZContentObjectState",
+../ezpublish/kernel/private/classes/ezcontentobjectstatelanguage.php-                                                                                          "foreign_attribute" => "id",
+../ezpublish/kernel/private/classes/ezcontentobjectstatelanguage.php-                                                                                          "multiplicity" => "1..*" ),
+--
+../ezpublish/kernel/private/classes/ezcontentobjectstate.php:                                                              "foreign_class" => "eZContentObjectStateGroup",
+../ezpublish/kernel/private/classes/ezcontentobjectstate.php-                                                              "foreign_attribute" => "id",
+../ezpublish/kernel/private/classes/ezcontentobjectstate.php-                                                              "multiplicity" => "1..*" ),
+--
+../ezpublish/kernel/shop/classes/ezmultipricedata.php:                                                                           'foreign_class' => 'eZContentObjectAttribute',
+../ezpublish/kernel/shop/classes/ezmultipricedata.php-                                                                           'foreign_attribute' => 'id',
+../ezpublish/kernel/shop/classes/ezmultipricedata.php-                                                                           'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/shop/classes/ezpaymentobject.php:                                                                        'foreign_class' => 'eZWorkflowProcess',
+../ezpublish/kernel/shop/classes/ezpaymentobject.php-                                                                        'foreign_attribute' => 'id',
+../ezpublish/kernel/shop/classes/ezpaymentobject.php-                                                                        'multiplicity' => '1..*' ),
+--
+../ezpublish/kernel/shop/classes/ezpaymentobject.php:                                                              'foreign_class' => 'eZOrder',
+../ezpublish/kernel/shop/classes/ezpaymentobject.php-                                                              'foreign_attribute' => 'id',
+../ezpublish/kernel/shop/classes/ezpaymentobject.php-                                                              'multiplicity' => '1..*' ),

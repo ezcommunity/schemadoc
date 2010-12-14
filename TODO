@@ -1,0 +1,125 @@
+
+
+# Foreign key errors
+--------------------------------------------------------------------------
+
+alter table ezcontentobject_name add foreign key(content_version) references ezcontentobject_version(version);
+ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_24c' (errno: 150)
+
+alter table ezcontentobject_link add foreign key(from_contentobject_version) references ezcontentobject_version(version);
+ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b3' (errno: 150)
+
+alter table ezm_block add foreign key(node_id) references ezcontentobject_tree(node_id);
+ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b0' (errno: 150)
+
+alter table ezm_pool add foreign key(object_id) references ezcontentobject(id);
+ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b0' (errno: 150)
+
+alter table ezm_pool add foreign key(node_id) references ezcontentobject_tree(node_id);
+ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b0' (errno: 150)
+
+
+alter table ezurlalias_ml add foreign key(parent) references ezurlalias_ml(id);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-70d_5b3'>, CONSTRAINT `#sql-70d_5b3_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `ezurlalias_ml` (`id`))
+
+alter table ezsearch_object_word_link add foreign key(contentclass_attribute_id) references ezcontentclass_attribute(id);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-6d3_61c'>, CONSTRAINT `#sql-6d3_61c_ibfk_4` FOREIGN KEY (`contentclass_attribute_id`) REFERENCES `ezcontentclass_attribute` (`id`))
+
+
+
+
+INNODB error examples:
+--------------------------------------------------------------------------
+
+---- ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b3' (errno: 150)
+
+Error in foreign key constraint of table ez/#sql-70d_5b3:
+foreign key(node_id) references ezcontentobject_tree(node_id):
+Cannot find an index in the referenced table where the
+referenced columns appear as the first columns, or column types
+in the table and the referenced table do not match for constraint.
+Note that the internal storage type of ENUM and SET changed in
+tables created with >= InnoDB-4.1.12, and such columns in old tables
+cannot be referenced by such columns in new tables.
+See http://dev.mysql.com/doc/refman/5.1/en/innodb-foreign-key-constraints.html
+for correct foreign key definition.
+----
+
+
+---- ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-70d_5b3'>, CONSTRAINT `#sql-70d_5b3_ibfk_2` FOREIGN KEY (`contentobject_id`) REFERENCES `ezuser` (`contentobject_id`))
+
+alter table ezuser_role add foreign key(contentobject_id) references ezuser(contentobject_id)
+Foreign key constraint fails for table `ez`.<result 2 when explaining filename '#sql-70d_5b3'>:
+,
+  CONSTRAINT `#sql-70d_5b3_ibfk_2` FOREIGN KEY (`contentobject_id`) REFERENCES `ezuser` (`contentobject_id`)
+Trying to add in child table, in index `ezuser_role_contentobject_id` tuple:
+DATA TUPLE: 2 fields;
+ 0: len 4; hex 8000000c; asc     ;; 1: len 4; hex 80000019; asc     ;;
+
+But in parent table `ez`.`ezuser`, in index `PRIMARY`,
+the closest match we can find is record:
+PHYSICAL RECORD: n_fields 7; compact format; info bits 0
+ 0: len 4; hex 8000000e; asc     ;; 1: len 6; hex 000000243d93; asc    $= ;; 2: len 7; hex 80000005d5011d; asc        ;; 3: len 9; hex 63706740657a2e6e6f; asc cpg@ez.no;; 4: len 5; hex 61646d696e; asc admin;; 5: len 30; hex 653438386266633362336566366233653366643937396432333964623939; asc e488bfc3b3ef6b3e3fd979d239db99;...(truncated); 6: len 4; hex 80000002; asc     ;;
+----
+
+
+Notes to self
+--------------------------------------------------------------------------
+# DB tables that should be (separate) subclasses of eZPersistentObject
+    ezsession
+    ezcontentobject_link
+    ezcobj_state_link
+    ezuser_role
+    ezsearch_object_word_link
+    ezapprove_items
+    ezpreferences
+    ezsession
+    ezuservisit
+    ezkeyword
+    ezkeyword_attribute_link
+    ezstarrating_data
+
+# eZTipafriendCounter has a relations key in the definition instead of the foreign_class, foreign_attribute values, which I haven't seen before.
+
+# No idea where zcollab_notification_rule.collab_notification_rule as fkey references
+
+# Any class can have it's own business logic applied to the fields in 
+    ezpending_actions
+    ezcontentobject_attribute
+
+# cronjobs/indexcontent.php uses ezpending_actions.param for ezcontentobject.id
+SELECT DISTINCT param FROM ezpending_actions WHERE action = 'index_object'
+
+# No code referring to
+    ezmessage
+    ezscheduled_script
+    ezsearch_return_count
+    ezurlalias
+    ezmodule_run
+    ezworkflow_assign
+
+# Subclasses ef ezpersistentobject without foreign keys defined (doesn't have to be a problem):
+
+    eZContentLanguage(ezcontent_language)
+    eZContentObjectStateGroup(ezcobj_state_group)
+    eZCurrencyData(ezcurrencydata)
+    eZDiscountRule(ezdiscountrule) 
+    eZFlowBlock(ezm_block) 
+    eZGeneralDigestUserSettings(ezgeneral_digest_user_settings) 
+    eZISBNGroup(ezisbn_group) 
+    eZISBNGroupRange(ezisbn_group_range)
+    eZNotificationEvent(eznotificationevent) 
+    eZOrderStatus(ezorder_status) 
+    eZURLAliasML(ezurlalias_ml) 
+    eZPendingActions(ezpending_actions)  
+    eZProductCategory(ezproductcategory)  
+    eZProductCollection(ezproductcollection)  
+    eZRole(ezrole)  
+    eZSection(ezsection)  
+    eZSiteData(ezsite_data)  
+    eZTipafriendRequest(eztipafriend_request)  
+    eZURL(ezurl)  
+    eZURLAliasML(ezurlalias_ml)  
+    eZURLWildcard(ezurlwildcard)  
+    eZVatType(ezvattype)  
+

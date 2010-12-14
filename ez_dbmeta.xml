@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="http://schemaspy.sourceforge.net/xmlschema/2008/09/03/schemaspy.meta.xsd">
+    <comments>eZ Publish 4.4 Database Schema Diagram</comments>
+    <tables>
+        <table name="ezmessage" comments="Depricated"/>
+        <table name="ezscheduled_script" comments="Depricated"/>
+        <table name="ezsearch_return_count" comments="Depricated"/>
+        <table name="ezurlalias" comments="Depricated"/>
+        <table name="ezmodule_run" comments="Depricated"/>
+        <table name="ezworkflow_assign" comments="Depricated"/>
+  </tables>
+</schemaMeta>
+
