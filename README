@@ -20,6 +20,9 @@ To generate the schemaSpy diagrams
 * Verify for db name username & password in generate_diagrams.sh or override with options.
 * Run 'generate_diagrams.sh -a' (-h for help)
 
+* The following example overrides db name, username and password and makes schemaSpy exclude some tables:
+./generate_diagrams.sh -n ezflow -u cpg -p 123 -x "-I '((ezevent.*)|(ezcssesitestyle.*)|(ezcomment.*)|(ezsurvey.*)'" -a
+
 
 To re-generate the sql foreign keys (already in the sql folder)
 
