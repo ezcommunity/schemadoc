@@ -17,8 +17,8 @@ schemaSpy requires
 
 To generate the schemaSpy diagrams
 
-* Verify for db name username & password in generate_diagrams.sh
-* Run generate_diagrams.sh
+* Verify for db name username & password in generate_diagrams.sh or override with options.
+* Run 'generate_diagrams.sh -a' (-h for help)
 
 
 To re-generate the sql foreign keys (already in the sql folder)
