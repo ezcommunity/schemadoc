@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ezpublish-schemadoc" basedir="." default="all">
+    <description>Utilizes schemaSpy to create the database schema documentation from an existing DB.</description>
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+    <property name="db.host" value="localhost" />
+    <property name="db.schema" value="schemadoc" />
+    <property name="db.user" value="root" />
+    <property name="db.pwd" value="123456" />
+    <property name="sql.dir" value="sqlfiles/" />
+
+    <target name="all" description="Re-creates the database and diagrams" depends="sql-all,dia-all" />
+    <target name="sql-all" description="Re-creates the database and schema: sql-get,sql-drop,sql-create,sql-schema" depends="sql-get,sql-drop,sql-create,sql-schema" />
+    <target name="dia-all" description="Re-creates foreign keys and creates schema diagrams: clean,init,diagrams" depends="clean,init,diagrams" />
+
+    <target name="sql-get" description="Downloads the sql schema files">
+        <delete dir="${sql.dir}"/>
+        <mkdir dir="${sql.dir}"/>
+        <get dest="${sql.dir}kernel.sql"
+             src="https://github.com/ezsystems/ezpublish/raw/master/kernel/sql/mysql/kernel_schema.sql" />
+        <get dest="${sql.dir}ezflow.sql"
+             src="https://github.com/ezsystems/ezflow/raw/master/packages/ezflow_extension/ezextension/ezflow/sql/mysql/mysql.sql" />
+        <get dest="${sql.dir}ezgmaplocation.sql"
+             src="https://github.com/ezsystems/ezgmaplocation/raw/master/packages/ezgmaplocation_extension/ezextension/ezgmaplocation/sql/mysql/mysql.sql" />
+        <get dest="${sql.dir}ezstarrating.sql"
+             src="https://github.com/ezsystems/ezstarrating/raw/master/packages/ezstarrating_extension/ezextension/ezstarrating/sql/mysql/mysql.sql" />
+    </target>
+
+    <target name="sql-drop" description="Dumps the database">
+        <exec executable="mysqladmin" failonerror="true">
+            <arg line="--user=${db.user}" />
+            <arg line="--password=${db.pwd}" />
+            <arg line="--host=${db.host}" />
+            <arg line="--force" />
+            <arg line="drop" />
+            <arg line="${db.schema}" />
+        </exec>
+    </target>
+
+    <target name="sql-create" description="Creates the database">
+        <echo message="Creating database ${db.schema}"/>
+        <exec executable="mysqladmin" failonerror="true">
+            <arg line="--user=${db.user}" />
+            <arg line="--password=${db.pwd}" />
+            <arg line="--host=${db.host}" />
+            <arg line="create" />
+            <arg line="${db.schema}" />
+        </exec>
+    </target>
+
+    <target name="sql-schema" description="Loads all the downloaded schema files">
+        <foreach target="sql-load" param="file">
+            <path>
+                <fileset dir="${sql.dir}" includes="*.sql"/>
+            </path>
+        </foreach>
+    </target>
+
+    <target name="sql-load">
+        <echo message="Loading ${file}"/>
+        <exec executable="mysql" failonerror="true">
+            <arg line="--user=${db.user}" />
+            <arg line="--password=${db.pwd}" />
+            <arg line="--host=${db.host}" />
+            <arg line="${db.schema}" />
+            <redirector input="${file}" />
+        </exec>
+    </target>
+
+    <target name="init" description="Adds the foreign keys to the database">
+        <antcall target="run-bash-script">
+            <param name="option" value="-c"/>
+        </antcall>
+    </target>
+
+    <target name="diagrams" description="Utilizes schemaSpy to create the database schema documentation from the database">
+        <antcall target="run-bash-script">
+            <param name="option" value="-d"/>
+        </antcall>
+    </target>
+
+    <target name="clean" description="Removes all foreign keys from the database">
+        <antcall target="run-bash-script">
+            <param name="option" value="-r"/>
+        </antcall>
+    </target>
+
+    <target name="run-bash-script" description="Runs generate_diagrams.sh">
+        <exec executable="/bin/bash" failonerror="true">
+            <arg line="generate_diagrams.sh" />
+            <arg line="-s ${db.host}" />
+            <arg line="-n ${db.schema}" />
+            <arg line="-u ${db.user}" />
+            <arg line="-p ${db.pwd}" />
+            <arg line="${option}" />
+        </exec>
+    </target>
+
+</project>
