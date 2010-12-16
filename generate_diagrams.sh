@@ -38,7 +38,7 @@ for((i=2;i<${#fks[@]};i+=2)); do
   iinc=i+1
   tableName=${fks[$i]}
   keyName=${fks[$iinc]}
-  echo "    Dropping $tableName : $keyName"
+  echo "    Dropping $tableName: $keyName"
   echo "ALTER TABLE $tableName"\
        "DROP FOREIGN KEY $keyName;"\
     | $mysql 
@@ -51,8 +51,11 @@ addkeys()
 sqlsetup
 echo "Adding foreign keys from $fkgen"
 $mysql < $fkgen
+if [ $? -ne 0 ] ; then exit 1 ; fi
+
 echo "Adding foreign keys from $fkman"
 $mysql < $fkman
+if [ $? -ne 0 ] ; then exit 1 ; fi
 }
 
 
@@ -61,6 +64,7 @@ diagrams()
 sqlsetup
 echo "Running $sp"  
 $java -jar $sp -host $host -t $db -db $schema -u $user -p $pass -o $out -dp $driver -meta $meta -hq -noads -norows $sspy
+if [ $? -ne 0 ] ; then exit 1 ; fi
 }
 
 
