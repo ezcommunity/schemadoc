@@ -3,12 +3,12 @@
             xsi:noNamespaceSchemaLocation="http://schemaspy.sourceforge.net/xmlschema/2008/09/03/schemaspy.meta.xsd">
     <comments>eZ Publish 4.4 Database Schema Diagram</comments>
     <tables>
-        <table name="ezmessage" comments="Depricated"/>
-        <table name="ezscheduled_script" comments="Depricated"/>
-        <table name="ezsearch_return_count" comments="Depricated"/>
-        <table name="ezurlalias" comments="Depricated"/>
-        <table name="ezmodule_run" comments="Depricated"/>
-        <table name="ezworkflow_assign" comments="Depricated"/>
+        <table name="ezmessage" comments="Deprecated"/>
+        <table name="ezscheduled_script" comments="Deprecated"/>
+        <table name="ezsearch_return_count" comments="Deprecated"/>
+        <table name="ezurlalias" comments="Deprecated"/>
+        <table name="ezmodule_run" comments="Deprecated"/>
+        <table name="ezworkflow_assign" comments="Deprecated"/>
   </tables>
 </schemaMeta>
 
