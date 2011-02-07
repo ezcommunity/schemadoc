@@ -25,6 +25,8 @@ ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
 alter table ezsearch_object_word_link add foreign key(contentclass_attribute_id) references ezcontentclass_attribute(id);
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-6d3_61c'>, CONSTRAINT `#sql-6d3_61c_ibfk_4` FOREIGN KEY (`contentclass_attribute_id`) REFERENCES `ezcontentclass_attribute` (`id`))
 
+alter table ezuser_role add foreign key(contentobject_id) references ezuser(contentobject_id);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-70d_5b3'>, CONSTRAINT `#sql-70d_5b3_ibfk_2` FOREIGN KEY (`contentobject_id`) REFERENCES `ezuser` (`contentobject_id`))
 
 
 
@@ -60,12 +62,18 @@ But in parent table `ez`.`ezuser`, in index `PRIMARY`,
 the closest match we can find is record:
 PHYSICAL RECORD: n_fields 7; compact format; info bits 0
  0: len 4; hex 8000000e; asc     ;; 1: len 6; hex 000000243d93; asc    $= ;; 2: len 7; hex 80000005d5011d; asc        ;; 3: len 9; hex 63706740657a2e6e6f; asc cpg@ez.no;; 4: len 5; hex 61646d696e; asc admin;; 5: len 30; hex 653438386266633362336566366233653366643937396432333964623939; asc e488bfc3b3ef6b3e3fd979d239db99;...(truncated); 6: len 4; hex 80000002; asc     ;;
+
+
+REASON: ezuser_role.contentobject_id can point to either
+1) ezuser.contentobject_id      (Users)
+2) ezcontentobject.id           (User groups)
 ----
 
 
 Notes to self
 --------------------------------------------------------------------------
 # DB tables that should be (separate) subclasses of eZPersistentObject
+# in order to define all fkeys in class-definitions
     ezsession
     ezcontentobject_link
     ezcobj_state_link
