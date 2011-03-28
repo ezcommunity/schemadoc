@@ -26,7 +26,7 @@ To generate the schemaSpy diagrams
 
 To re-generate the sql foreign keys (already in the sql folder)
 
-* symlink the git clone from the ezpublish extension folder (no need to activate as an extension)
+* symlink the git clone of schemadoc from the ezpublish extension folder (no need to activate as an extension)
 * 'php extension/schemadoc/php/autogenkeys.php' generates the sql (to standard out, no html formating) found in fkeys_generated.sql
 * fkeys_manual.sql contains SQL foreign keys not handled by autogenkeys.php
 

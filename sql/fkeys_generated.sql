@@ -136,3 +136,7 @@ alter table ezstarrating_data add foreign key(contentobject_attribute_id) refere
 alter table ezstarrating add foreign key(contentobject_id) references ezcontentobject(id);
 alter table ezstarrating add foreign key(contentobject_attribute_id) references ezcontentobject_attribute(id);
 
+-- eZ Publish 4.5.0
+alter table ezpublishingqueueprocesses add foreign key(ezcontentobject_version_id) references ezcontentobject_version(id);
+
+

@@ -17,7 +17,7 @@
         <delete dir="${sql.dir}"/>
         <mkdir dir="${sql.dir}"/>
         <get dest="${sql.dir}kernel.sql"
-             src="https://github.com/ezsystems/ezpublish/raw/master/kernel/sql/mysql/kernel_schema.sql" />
+             src="https://github.com/ezsystems/ezpublish-ee/raw/stable-4.5/kernel/sql/mysql/kernel_schema.sql" />
         <get dest="${sql.dir}ezflow.sql"
              src="https://github.com/ezsystems/ezflow/raw/master/packages/ezflow_extension/ezextension/ezflow/sql/mysql/mysql.sql" />
         <get dest="${sql.dir}ezgmaplocation.sql"
