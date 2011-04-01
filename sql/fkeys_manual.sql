@@ -47,7 +47,7 @@ alter table ezstarrating_data add foreign key(session_key) references ezsession(
 -- Associations introduced eZ Publish 4.5.0 using ezcPersistentObjects
 alter table ezprest_clients add foreign key(owner_id) references ezuser(contentobject_id);
 alter table ezprest_token add foreign key(client_id) references ezprest_clients(client_id);
-alter table ezprest_token add foreign key(user_id) references ezprest_authorized_clients(user_id);
+-- alter table ezprest_token add foreign key(user_id) references ezprest_authorized_clients(user_id); -- 150 ERROR: missing index 
 alter table ezprest_authorized_clients add foreign key(rest_client_id) references ezprest_clients(id);
 alter table ezprest_authorized_clients add foreign key(user_id) references ezuser(contentobject_id);
 alter table ezprest_authcode add foreign key(client_id) references ezprest_clients(client_id);

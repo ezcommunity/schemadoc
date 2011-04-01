@@ -18,6 +18,8 @@ ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b0' (errno: 150)
 alter table ezm_pool add foreign key(node_id) references ezcontentobject_tree(node_id);
 ERROR 1005 (HY000): Can't create table 'ez.#sql-70d_5b0' (errno: 150)
 
+alter table ezprest_token add foreign key(user_id) references ezprest_authorized_clients(user_id);
+ERROR 1005 (HY000) at line 50: Can't create table 'schemadoc.#sql-30d_86e9' (errno: 150) 
 
 alter table ezurlalias_ml add foreign key(parent) references ezurlalias_ml(id);
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`ez`.<result 2 when explaining filename '#sql-70d_5b3'>, CONSTRAINT `#sql-70d_5b3_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `ezurlalias_ml` (`id`))
