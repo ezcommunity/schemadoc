@@ -139,4 +139,3 @@ alter table ezstarrating add foreign key(contentobject_attribute_id) references 
 -- eZ Publish 4.5.0
 alter table ezpublishingqueueprocesses add foreign key(ezcontentobject_version_id) references ezcontentobject_version(id);
 
-
