@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
             xsi:noNamespaceSchemaLocation="http://schemaspy.sourceforge.net/xmlschema/2008/09/03/schemaspy.meta.xsd">
-    <comments>eZ Publish 4.5 Database Schema Diagram</comments>
+    <comments>eZ Publish 4.6 Database Schema Diagram</comments>
     <tables>
         <!-- 4.4 and older -->
         <table name="ezmessage" comments="Deprecated"/>
@@ -16,6 +16,8 @@
         <table name="ezprest_authcode" comments="eZ Publish 4.5.0"/>
         <table name="ezprest_clients" comments="eZ Publish 4.5.0"/>
         <table name="ezprest_authorized_clients" comments="eZ Publish 4.5.0"/>
+        <!-- 4.6 -->
+        <table name="ezorder_nr_incr" comments="eZ Publish 4.6.0"/>
   </tables>
 </schemaMeta>
 

@@ -42,7 +42,8 @@ alter table ezkeyword add foreign key(class_id) references ezcontentclass(id);
 alter table ezkeyword_attribute_link add foreign key(keyword_id) references ezkeyword(id);
 alter table ezkeyword_attribute_link add foreign key(objectattribute_id) references ezcontentobject_attribute(id);
 
-alter table ezstarrating_data add foreign key(session_key) references ezsession(session_key);
+-- Started failing on eZ Pubish 4.6 with a 150 ERROR
+-- alter table ezstarrating_data add foreign key(session_key) references ezsession(session_key);
 
 -- Associations introduced eZ Publish 4.5.0 using ezcPersistentObjects
 alter table ezprest_clients add foreign key(owner_id) references ezuser(contentobject_id);
